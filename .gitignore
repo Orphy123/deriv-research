@@ -1,0 +1,49 @@
+# --- Secrets / credentials --------------------------------------------------
+.env
+.env.*
+!.env.example
+config/accounts.yaml
+*.pem
+*.key
+credentials*.json
+token*.txt
+
+# --- Python -----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+.venv/
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+.mypy_cache/
+.ruff_cache/
+
+# --- Data & logs ------------------------------------------------------------
+# Heavy market data stays local; small analysis artefacts (JSON/MD) are tracked.
+data/raw/
+data/processed/
+data/ticks/
+*.parquet
+*.csv
+*.feather
+*.h5
+*.hdf5
+logs/
+!logs/.gitkeep
+
+# --- Outputs ----------------------------------------------------------------
+notebooks/.ipynb_checkpoints/
+*.png
+!docs/*.png
+
+# --- OS / IDE ---------------------------------------------------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.cursor/

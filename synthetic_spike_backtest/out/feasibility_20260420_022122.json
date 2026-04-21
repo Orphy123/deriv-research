@@ -1,0 +1,25 @@
+{
+  "decision": "inconclusive",
+  "checks": {
+    "trade_count_ok": false,
+    "baseline_expectancy_ok": false,
+    "stress_expectancy_ok": false,
+    "positive_month_ratio_ok": false,
+    "month_concentration_ok": false
+  },
+  "observed": {
+    "trades": 4,
+    "baseline_mean_points": -1169.43359375,
+    "stress_mean_points": -1428.680419921875,
+    "positive_month_ratio": 0.0,
+    "max_month_pnl_share": 0.8674321503131524
+  },
+  "thresholds": {
+    "min_trades_required": 40,
+    "min_baseline_expectancy_points": 0.0,
+    "min_stress_expectancy_points": -250.0,
+    "min_positive_month_ratio": 0.5,
+    "max_month_pnl_share": 0.7
+  },
+  "manual_replay_match_rate": 1.0
+}

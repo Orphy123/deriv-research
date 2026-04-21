@@ -1,0 +1,5 @@
+symbol,entry_idx,recorded_exit_idx,expected_exit_idx,recorded_reason,expected_reason,match
+Boom 1000 Index,1727581,1727582,1727582,adverse_tick,adverse_tick,True
+Boom 1000 Index,2323752,2323753,2323753,adverse_tick,adverse_tick,True
+Crash 1000 Index,1681189,1681190,1681190,adverse_tick,adverse_tick,True
+Crash 1000 Index,4607266,4607267,4607267,adverse_tick,adverse_tick,True

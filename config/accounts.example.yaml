@@ -1,0 +1,13 @@
+# ============================================================================
+# BROKER CREDENTIALS — TEMPLATE
+# ============================================================================
+# Copy this file to accounts.yaml and fill in your credentials.
+# accounts.yaml is gitignored.
+# ============================================================================
+
+deriv:
+  label: "Deriv Demo"
+  mt5_account: "00000000"
+  mt5_password: "your_password_here"
+  mt5_server: "Deriv-Demo"
+  mt5_path: "C:\\Program Files\\MetaTrader 5 Terminal\\terminal64.exe"

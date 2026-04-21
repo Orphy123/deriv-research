@@ -1,0 +1,54 @@
+{
+  "primary": {
+    "Crash 1000 Index": {
+      "status": "KILL",
+      "killed_at_step": 2,
+      "measurements": {
+        "step_1_hmm": {
+          "step": 1,
+          "metric": "median_regime_duration_minutes",
+          "kill_threshold": 45.0,
+          "observed_median_minutes": 173.5,
+          "passed": true,
+          "n_minute_bars": 129601
+        },
+        "step_2_acf": {
+          "step": 2,
+          "metric": "abs(acf_lag1)",
+          "kill_threshold": 0.15,
+          "observed_lag1": -0.04091137845764569,
+          "observed_abs_lag1": 0.04091137845764569,
+          "white_noise_ci95": 0.04216272656431678,
+          "n_hours": 2161,
+          "passed": false
+        }
+      }
+    }
+  },
+  "exploratory": {
+    "Boom 1000 Index": {
+      "status": "KILL",
+      "killed_at_step": 2,
+      "measurements": {
+        "step_1_hmm": {
+          "step": 1,
+          "metric": "median_regime_duration_minutes",
+          "kill_threshold": 45.0,
+          "observed_median_minutes": 596.5,
+          "passed": true,
+          "n_minute_bars": 129601
+        },
+        "step_2_acf": {
+          "step": 2,
+          "metric": "abs(acf_lag1)",
+          "kill_threshold": 0.15,
+          "observed_lag1": -0.01830150953423257,
+          "observed_abs_lag1": 0.01830150953423257,
+          "white_noise_ci95": 0.04216272656431678,
+          "n_hours": 2161,
+          "passed": false
+        }
+      }
+    }
+  }
+}

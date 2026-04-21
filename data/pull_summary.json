@@ -1,0 +1,266 @@
+{
+  "Boom 1000 Index": {
+    "symbol": "Boom 1000 Index",
+    "info": {
+      "name": "Boom 1000 Index",
+      "description": "On average 1 spike occurs in the price series every 1000 ticks",
+      "point": 0.0001,
+      "digits": 4,
+      "spread": 16882,
+      "tick_size": 0.0001,
+      "tick_value": 9.999999999999999e-05,
+      "contract_size": 1.0,
+      "volume_min": 0.2,
+      "volume_max": 80.0,
+      "volume_step": 0.01,
+      "trade_mode": 4,
+      "filling_mode": 1,
+      "currency_base": "USD",
+      "currency_profit": "USD",
+      "currency_margin": "USD",
+      "visible": true
+    },
+    "total_days_requested": 90,
+    "chunk_days": 7,
+    "pulled_at": "2026-04-18T19:58:51.683842+00:00",
+    "total_rows": 7678045,
+    "chunks": [
+      {
+        "path": "C:\\Users\\Administrator\\Desktop\\deriv-research\\data\\ticks\\Boom_1000_Index\\Boom_1000_Index_20260118_20260125.parquet",
+        "rows": 597457,
+        "from": "2026-01-18T19:58:46+00:00",
+        "to": "2026-01-25T19:58:46+00:00",
+        "actual_from": "2026-01-18 19:58:46.117000+00:00",
+        "actual_to": "2026-01-25 19:58:45.117000+00:00"
+      },
+      {
+        "path": "C:\\Users\\Administrator\\Desktop\\deriv-research\\data\\ticks\\Boom_1000_Index\\Boom_1000_Index_20260125_20260201.parquet",
+        "rows": 597698,
+        "from": "2026-01-25T19:58:46+00:00",
+        "to": "2026-02-01T19:58:46+00:00",
+        "actual_from": "2026-01-25 19:58:46.129000+00:00",
+        "actual_to": "2026-02-01 19:58:45.127000+00:00"
+      },
+      {
+        "path": "C:\\Users\\Administrator\\Desktop\\deriv-research\\data\\ticks\\Boom_1000_Index\\Boom_1000_Index_20260201_20260208.parquet",
+        "rows": 597252,
+        "from": "2026-02-01T19:58:46+00:00",
+        "to": "2026-02-08T19:58:46+00:00",
+        "actual_from": "2026-02-01 19:58:46.154000+00:00",
+        "actual_to": "2026-02-08 19:58:45.142000+00:00"
+      },
+      {
+        "path": "C:\\Users\\Administrator\\Desktop\\deriv-research\\data\\ticks\\Boom_1000_Index\\Boom_1000_Index_20260208_20260215.parquet",
+        "rows": 597005,
+        "from": "2026-02-08T19:58:46+00:00",
+        "to": "2026-02-15T19:58:46+00:00",
+        "actual_from": "2026-02-08 19:58:46.144000+00:00",
+        "actual_to": "2026-02-15 19:58:45.130000+00:00"
+      },
+      {
+        "path": "C:\\Users\\Administrator\\Desktop\\deriv-research\\data\\ticks\\Boom_1000_Index\\Boom_1000_Index_20260215_20260222.parquet",
+        "rows": 597309,
+        "from": "2026-02-15T19:58:46+00:00",
+        "to": "2026-02-22T19:58:46+00:00",
+        "actual_from": "2026-02-15 19:58:46.152000+00:00",
+        "actual_to": "2026-02-22 19:58:45.125000+00:00"
+      },
+      {
+        "path": "C:\\Users\\Administrator\\Desktop\\deriv-research\\data\\ticks\\Boom_1000_Index\\Boom_1000_Index_20260222_20260301.parquet",
+        "rows": 597103,
+        "from": "2026-02-22T19:58:46+00:00",
+        "to": "2026-03-01T19:58:46+00:00",
+        "actual_from": "2026-02-22 19:58:46.142000+00:00",
+        "actual_to": "2026-03-01 19:58:45.132000+00:00"
+      },
+      {
+        "path": "C:\\Users\\Administrator\\Desktop\\deriv-research\\data\\ticks\\Boom_1000_Index\\Boom_1000_Index_20260301_20260308.parquet",
+        "rows": 597165,
+        "from": "2026-03-01T19:58:46+00:00",
+        "to": "2026-03-08T19:58:46+00:00",
+        "actual_from": "2026-03-01 19:58:46.132000+00:00",
+        "actual_to": "2026-03-08 19:58:45.128000+00:00"
+      },
+      {
+        "path": "C:\\Users\\Administrator\\Desktop\\deriv-research\\data\\ticks\\Boom_1000_Index\\Boom_1000_Index_20260308_20260315.parquet",
+        "rows": 597128,
+        "from": "2026-03-08T19:58:46+00:00",
+        "to": "2026-03-15T19:58:46+00:00",
+        "actual_from": "2026-03-08 19:58:46.131000+00:00",
+        "actual_to": "2026-03-15 19:58:45.121000+00:00"
+      },
+      {
+        "path": "C:\\Users\\Administrator\\Desktop\\deriv-research\\data\\ticks\\Boom_1000_Index\\Boom_1000_Index_20260315_20260322.parquet",
+        "rows": 597502,
+        "from": "2026-03-15T19:58:46+00:00",
+        "to": "2026-03-22T19:58:46+00:00",
+        "actual_from": "2026-03-15 19:58:46.142000+00:00",
+        "actual_to": "2026-03-22 19:58:45.115000+00:00"
+      },
+      {
+        "path": "C:\\Users\\Administrator\\Desktop\\deriv-research\\data\\ticks\\Boom_1000_Index\\Boom_1000_Index_20260322_20260329.parquet",
+        "rows": 597113,
+        "from": "2026-03-22T19:58:46+00:00",
+        "to": "2026-03-29T19:58:46+00:00",
+        "actual_from": "2026-03-22 19:58:46.137000+00:00",
+        "actual_to": "2026-03-29 19:58:45.135000+00:00"
+      },
+      {
+        "path": "C:\\Users\\Administrator\\Desktop\\deriv-research\\data\\ticks\\Boom_1000_Index\\Boom_1000_Index_20260329_20260405.parquet",
+        "rows": 597025,
+        "from": "2026-03-29T19:58:46+00:00",
+        "to": "2026-04-05T19:58:46+00:00",
+        "actual_from": "2026-03-29 19:58:46.141000+00:00",
+        "actual_to": "2026-04-05 19:58:45.116000+00:00"
+      },
+      {
+        "path": "C:\\Users\\Administrator\\Desktop\\deriv-research\\data\\ticks\\Boom_1000_Index\\Boom_1000_Index_20260405_20260412.parquet",
+        "rows": 596891,
+        "from": "2026-04-05T19:58:46+00:00",
+        "to": "2026-04-12T19:58:46+00:00",
+        "actual_from": "2026-04-05 19:58:46.128000+00:00",
+        "actual_to": "2026-04-12 19:58:45.134000+00:00"
+      },
+      {
+        "path": "C:\\Users\\Administrator\\Desktop\\deriv-research\\data\\ticks\\Boom_1000_Index\\Boom_1000_Index_20260412_20260418.parquet",
+        "rows": 511397,
+        "from": "2026-04-12T19:58:46+00:00",
+        "to": "2026-04-18T19:58:46+00:00",
+        "actual_from": "2026-04-12 19:58:46.144000+00:00",
+        "actual_to": "2026-04-18 19:58:45.119000+00:00"
+      }
+    ]
+  },
+  "Crash 1000 Index": {
+    "symbol": "Crash 1000 Index",
+    "info": {
+      "name": "Crash 1000 Index",
+      "description": "On average 1 drop occurs in the price series every 1000 ticks",
+      "point": 0.0001,
+      "digits": 4,
+      "spread": 4530,
+      "tick_size": 0.0001,
+      "tick_value": 9.999999999999999e-05,
+      "contract_size": 1.0,
+      "volume_min": 0.2,
+      "volume_max": 290.0,
+      "volume_step": 0.01,
+      "trade_mode": 4,
+      "filling_mode": 1,
+      "currency_base": "USD",
+      "currency_profit": "USD",
+      "currency_margin": "USD",
+      "visible": true
+    },
+    "total_days_requested": 90,
+    "chunk_days": 7,
+    "pulled_at": "2026-04-18T19:58:57.771114+00:00",
+    "total_rows": 7509834,
+    "chunks": [
+      {
+        "path": "C:\\Users\\Administrator\\Desktop\\deriv-research\\data\\ticks\\Crash_1000_Index\\Crash_1000_Index_20260118_20260125.parquet",
+        "rows": 582047,
+        "from": "2026-01-18T19:58:51+00:00",
+        "to": "2026-01-25T19:58:51+00:00",
+        "actual_from": "2026-01-18 19:58:51.117000+00:00",
+        "actual_to": "2026-01-25 19:58:50.137000+00:00"
+      },
+      {
+        "path": "C:\\Users\\Administrator\\Desktop\\deriv-research\\data\\ticks\\Crash_1000_Index\\Crash_1000_Index_20260125_20260201.parquet",
+        "rows": 580487,
+        "from": "2026-01-25T19:58:51+00:00",
+        "to": "2026-02-01T19:58:51+00:00",
+        "actual_from": "2026-01-25 19:58:51.110000+00:00",
+        "actual_to": "2026-02-01 19:58:50.121000+00:00"
+      },
+      {
+        "path": "C:\\Users\\Administrator\\Desktop\\deriv-research\\data\\ticks\\Crash_1000_Index\\Crash_1000_Index_20260201_20260208.parquet",
+        "rows": 581978,
+        "from": "2026-02-01T19:58:51+00:00",
+        "to": "2026-02-08T19:58:51+00:00",
+        "actual_from": "2026-02-01 19:58:51.120000+00:00",
+        "actual_to": "2026-02-08 19:58:50.137000+00:00"
+      },
+      {
+        "path": "C:\\Users\\Administrator\\Desktop\\deriv-research\\data\\ticks\\Crash_1000_Index\\Crash_1000_Index_20260208_20260215.parquet",
+        "rows": 585307,
+        "from": "2026-02-08T19:58:51+00:00",
+        "to": "2026-02-15T19:58:51+00:00",
+        "actual_from": "2026-02-08 19:58:51.140000+00:00",
+        "actual_to": "2026-02-15 19:58:49.137000+00:00"
+      },
+      {
+        "path": "C:\\Users\\Administrator\\Desktop\\deriv-research\\data\\ticks\\Crash_1000_Index\\Crash_1000_Index_20260215_20260222.parquet",
+        "rows": 584695,
+        "from": "2026-02-15T19:58:51+00:00",
+        "to": "2026-02-22T19:58:51+00:00",
+        "actual_from": "2026-02-15 19:58:51.133000+00:00",
+        "actual_to": "2026-02-22 19:58:50.149000+00:00"
+      },
+      {
+        "path": "C:\\Users\\Administrator\\Desktop\\deriv-research\\data\\ticks\\Crash_1000_Index\\Crash_1000_Index_20260222_20260301.parquet",
+        "rows": 585068,
+        "from": "2026-02-22T19:58:51+00:00",
+        "to": "2026-03-01T19:58:51+00:00",
+        "actual_from": "2026-02-22 19:58:51.123000+00:00",
+        "actual_to": "2026-03-01 19:58:50.128000+00:00"
+      },
+      {
+        "path": "C:\\Users\\Administrator\\Desktop\\deriv-research\\data\\ticks\\Crash_1000_Index\\Crash_1000_Index_20260301_20260308.parquet",
+        "rows": 586076,
+        "from": "2026-03-01T19:58:51+00:00",
+        "to": "2026-03-08T19:58:51+00:00",
+        "actual_from": "2026-03-01 19:58:51.130000+00:00",
+        "actual_to": "2026-03-08 19:58:50.138000+00:00"
+      },
+      {
+        "path": "C:\\Users\\Administrator\\Desktop\\deriv-research\\data\\ticks\\Crash_1000_Index\\Crash_1000_Index_20260308_20260315.parquet",
+        "rows": 585437,
+        "from": "2026-03-08T19:58:51+00:00",
+        "to": "2026-03-15T19:58:51+00:00",
+        "actual_from": "2026-03-08 19:58:51.123000+00:00",
+        "actual_to": "2026-03-15 19:58:50.141000+00:00"
+      },
+      {
+        "path": "C:\\Users\\Administrator\\Desktop\\deriv-research\\data\\ticks\\Crash_1000_Index\\Crash_1000_Index_20260315_20260322.parquet",
+        "rows": 584519,
+        "from": "2026-03-15T19:58:51+00:00",
+        "to": "2026-03-22T19:58:51+00:00",
+        "actual_from": "2026-03-15 19:58:51.128000+00:00",
+        "actual_to": "2026-03-22 19:58:50.139000+00:00"
+      },
+      {
+        "path": "C:\\Users\\Administrator\\Desktop\\deriv-research\\data\\ticks\\Crash_1000_Index\\Crash_1000_Index_20260322_20260329.parquet",
+        "rows": 584562,
+        "from": "2026-03-22T19:58:51+00:00",
+        "to": "2026-03-29T19:58:51+00:00",
+        "actual_from": "2026-03-22 19:58:51.117000+00:00",
+        "actual_to": "2026-03-29 19:58:50.122000+00:00"
+      },
+      {
+        "path": "C:\\Users\\Administrator\\Desktop\\deriv-research\\data\\ticks\\Crash_1000_Index\\Crash_1000_Index_20260329_20260405.parquet",
+        "rows": 583434,
+        "from": "2026-03-29T19:58:51+00:00",
+        "to": "2026-04-05T19:58:51+00:00",
+        "actual_from": "2026-03-29 19:58:51.120000+00:00",
+        "actual_to": "2026-04-05 19:58:50.137000+00:00"
+      },
+      {
+        "path": "C:\\Users\\Administrator\\Desktop\\deriv-research\\data\\ticks\\Crash_1000_Index\\Crash_1000_Index_20260405_20260412.parquet",
+        "rows": 585388,
+        "from": "2026-04-05T19:58:51+00:00",
+        "to": "2026-04-12T19:58:51+00:00",
+        "actual_from": "2026-04-05 19:58:51.114000+00:00",
+        "actual_to": "2026-04-12 19:58:50.141000+00:00"
+      },
+      {
+        "path": "C:\\Users\\Administrator\\Desktop\\deriv-research\\data\\ticks\\Crash_1000_Index\\Crash_1000_Index_20260412_20260418.parquet",
+        "rows": 500836,
+        "from": "2026-04-12T19:58:51+00:00",
+        "to": "2026-04-18T19:58:51+00:00",
+        "actual_from": "2026-04-12 19:58:51.123000+00:00",
+        "actual_to": "2026-04-18 19:58:50.111000+00:00"
+      }
+    ]
+  }
+}

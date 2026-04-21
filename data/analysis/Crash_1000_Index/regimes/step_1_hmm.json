@@ -1,0 +1,32 @@
+{
+  "step": 1,
+  "metric": "median_regime_duration_minutes",
+  "kill_threshold": 45.0,
+  "observed_median_minutes": 173.5,
+  "passed": true,
+  "run_stats": {
+    "state_0": {
+      "n_runs": 9,
+      "median_minutes": 45.0,
+      "mean_minutes": 3140.777777777778
+    },
+    "state_1": {
+      "n_runs": 9,
+      "median_minutes": 495.0,
+      "mean_minutes": 11259.333333333334
+    },
+    "overall_median_minutes": 173.5,
+    "n_total_runs": 18,
+    "state_means": [
+      0.2911192687025941,
+      0.3368828094402267
+    ],
+    "state_vars": [
+      0.0007225698467534597,
+      0.0009763171244974807
+    ],
+    "n_iter_ran": 8,
+    "converged": true
+  },
+  "n_minute_bars": 129601
+}

@@ -1,0 +1,255 @@
+{
+  "trades": 4,
+  "scenarios": {
+    "gross": {
+      "name": "gross",
+      "trades": 4,
+      "win_rate": 0.0,
+      "mean_points": -132.4462890625,
+      "median_points": -74.462890625,
+      "total_points": -529.78515625
+    },
+    "spread_only": {
+      "name": "spread_only",
+      "trades": 4,
+      "win_rate": 0.0,
+      "mean_points": -1169.43359375,
+      "median_points": -1096.19140625,
+      "total_points": -4677.734375
+    },
+    "spread_plus_slippage": {
+      "name": "spread_plus_slippage",
+      "trades": 4,
+      "win_rate": 0.0,
+      "mean_points": -1169.43359375,
+      "median_points": -1096.19140625,
+      "total_points": -4677.734375
+    },
+    "stress": {
+      "name": "stress",
+      "trades": 4,
+      "win_rate": 0.0,
+      "mean_points": -1428.680419921875,
+      "median_points": -1351.62353515625,
+      "total_points": -5714.7216796875
+    }
+  },
+  "monthly": {
+    "gross": [
+      {
+        "entry_month": "2026-02",
+        "trades": 3,
+        "mean_points": -154.62239583333334,
+        "total_points": -463.8671875
+      },
+      {
+        "entry_month": "2026-03",
+        "trades": 1,
+        "mean_points": -65.91796875,
+        "total_points": -65.91796875
+      }
+    ],
+    "spread_only": [
+      {
+        "entry_month": "2026-02",
+        "trades": 3,
+        "mean_points": -1352.5390625,
+        "total_points": -4057.6171875
+      },
+      {
+        "entry_month": "2026-03",
+        "trades": 1,
+        "mean_points": -620.1171875,
+        "total_points": -620.1171875
+      }
+    ],
+    "spread_plus_slippage": [
+      {
+        "entry_month": "2026-02",
+        "trades": 3,
+        "mean_points": -1352.5390625,
+        "total_points": -4057.6171875
+      },
+      {
+        "entry_month": "2026-03",
+        "trades": 1,
+        "mean_points": -620.1171875,
+        "total_points": -620.1171875
+      }
+    ],
+    "stress": [
+      {
+        "entry_month": "2026-02",
+        "trades": 3,
+        "mean_points": -1652.0182291666667,
+        "total_points": -4956.0546875
+      },
+      {
+        "entry_month": "2026-03",
+        "trades": 1,
+        "mean_points": -758.6669921875,
+        "total_points": -758.6669921875
+      }
+    ]
+  },
+  "monthly_by_symbol": {
+    "gross": [
+      {
+        "symbol": "Boom 1000 Index",
+        "entry_month": "2026-02",
+        "trades": 2,
+        "mean_points": -227.05078125,
+        "total_points": -454.1015625
+      },
+      {
+        "symbol": "Crash 1000 Index",
+        "entry_month": "2026-02",
+        "trades": 1,
+        "mean_points": -9.765625,
+        "total_points": -9.765625
+      },
+      {
+        "symbol": "Crash 1000 Index",
+        "entry_month": "2026-03",
+        "trades": 1,
+        "mean_points": -65.91796875,
+        "total_points": -65.91796875
+      }
+    ],
+    "spread_only": [
+      {
+        "symbol": "Boom 1000 Index",
+        "entry_month": "2026-02",
+        "trades": 2,
+        "mean_points": -1757.8125,
+        "total_points": -3515.625
+      },
+      {
+        "symbol": "Crash 1000 Index",
+        "entry_month": "2026-02",
+        "trades": 1,
+        "mean_points": -541.9921875,
+        "total_points": -541.9921875
+      },
+      {
+        "symbol": "Crash 1000 Index",
+        "entry_month": "2026-03",
+        "trades": 1,
+        "mean_points": -620.1171875,
+        "total_points": -620.1171875
+      }
+    ],
+    "spread_plus_slippage": [
+      {
+        "symbol": "Boom 1000 Index",
+        "entry_month": "2026-02",
+        "trades": 2,
+        "mean_points": -1757.8125,
+        "total_points": -3515.625
+      },
+      {
+        "symbol": "Crash 1000 Index",
+        "entry_month": "2026-02",
+        "trades": 1,
+        "mean_points": -541.9921875,
+        "total_points": -541.9921875
+      },
+      {
+        "symbol": "Crash 1000 Index",
+        "entry_month": "2026-03",
+        "trades": 1,
+        "mean_points": -620.1171875,
+        "total_points": -620.1171875
+      }
+    ],
+    "stress": [
+      {
+        "symbol": "Boom 1000 Index",
+        "entry_month": "2026-02",
+        "trades": 2,
+        "mean_points": -2140.5029296875,
+        "total_points": -4281.005859375
+      },
+      {
+        "symbol": "Crash 1000 Index",
+        "entry_month": "2026-02",
+        "trades": 1,
+        "mean_points": -675.048828125,
+        "total_points": -675.048828125
+      },
+      {
+        "symbol": "Crash 1000 Index",
+        "entry_month": "2026-03",
+        "trades": 1,
+        "mean_points": -758.6669921875,
+        "total_points": -758.6669921875
+      }
+    ]
+  },
+  "by_symbol": {
+    "gross": [
+      {
+        "symbol": "Boom 1000 Index",
+        "trades": 2,
+        "mean_points": -227.05078125,
+        "median_points": -227.05078125,
+        "total_points": -454.1015625
+      },
+      {
+        "symbol": "Crash 1000 Index",
+        "trades": 2,
+        "mean_points": -37.841796875,
+        "median_points": -37.841796875,
+        "total_points": -75.68359375
+      }
+    ],
+    "spread_only": [
+      {
+        "symbol": "Boom 1000 Index",
+        "trades": 2,
+        "mean_points": -1757.8125,
+        "median_points": -1757.8125,
+        "total_points": -3515.625
+      },
+      {
+        "symbol": "Crash 1000 Index",
+        "trades": 2,
+        "mean_points": -581.0546875,
+        "median_points": -581.0546875,
+        "total_points": -1162.109375
+      }
+    ],
+    "spread_plus_slippage": [
+      {
+        "symbol": "Boom 1000 Index",
+        "trades": 2,
+        "mean_points": -1757.8125,
+        "median_points": -1757.8125,
+        "total_points": -3515.625
+      },
+      {
+        "symbol": "Crash 1000 Index",
+        "trades": 2,
+        "mean_points": -581.0546875,
+        "median_points": -581.0546875,
+        "total_points": -1162.109375
+      }
+    ],
+    "stress": [
+      {
+        "symbol": "Boom 1000 Index",
+        "trades": 2,
+        "mean_points": -2140.5029296875,
+        "median_points": -2140.5029296875,
+        "total_points": -4281.005859375
+      },
+      {
+        "symbol": "Crash 1000 Index",
+        "trades": 2,
+        "mean_points": -716.85791015625,
+        "median_points": -716.85791015625,
+        "total_points": -1433.7158203125
+      }
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+# ============================================================================
+# RESEARCH CONFIG
+# ============================================================================
+# Non-sensitive config. Broker credentials live in accounts.yaml (gitignored).
+# ============================================================================
+
+# Symbols we care about. Actual strings are verified by probe_history.py
+# against the broker's symbols_get() list.
+symbols:
+  boom_candidates:
+    - "Boom 1000 Index"
+    - "BOOM1000"
+    - "Boom1000"
+  crash_candidates:
+    - "Crash 1000 Index"
+    - "CRASH1000"
+    - "Crash1000"
+
+# Where to store pulled tick data
+paths:
+  data_dir: "data"
+  logs_dir: "logs"
+  ticks_subdir: "ticks"
+
+# Spike detection (used in analysis notebooks, not live trading)
+spike_detection:
+  # Minimum single-tick absolute price delta in POINTS to classify as a spike.
+  # Boom 1000 spikes are typically 40k-300k+ points. Start conservative at 30k
+  # to capture medium spikes too; verify the distribution in notebook 01.
+  threshold_points: 30000
+
+# History probe windows (days back from now)
+probe_windows_days: [1, 7, 30, 90, 180, 365]
+
+# Phase 0.5 regime-detection thresholds. Frozen by PROTOCOL.md; do not tune
+# after analysis has been run. See PROTOCOL.md for the full rationale.
+regime_detection:
+  primary_symbol: "Crash 1000 Index"
+  primary_threshold_points: 10000
+  hold_window_ticks: 600
+  spread_points_roundtrip: 1430
+  spike_mask_threshold_points: 420   # approx p99.5 of non-spike tick delta
+  kill:
+    k1_min_regime_median_minutes: 45
+    k2_min_abs_acf: 0.15
+    k3_min_topq_signed_drift_points: 1430
+    k4_min_positive_folds: 4
+    k4_min_walkforward_sharpe: 1.0
+  walkforward:
+    n_folds: 6
+  exploratory:
+    symbols: ["Boom 1000 Index"]
+    timeframes: ["H4", "D1"]

@@ -1,0 +1,47 @@
+project:
+  name: synthetic_spike_backtest
+  version: "1.0"
+
+data:
+  # Reuse existing research tick parquet store by default.
+  data_root: "C:/Users/Administrator/Desktop/deriv-research/data"
+  symbols:
+    - "Boom 1000 Index"
+    - "Crash 1000 Index"
+
+strategy:
+  trigger_opposite_threshold_points: 10000
+  watch_minutes: 10
+  max_hold_minutes: 15
+  entry_offset_ticks: 0
+  adverse_exit_mode: "first_adverse_tick"
+  direction_by_symbol:
+    "Boom 1000 Index": "LONG"
+    "Crash 1000 Index": "SHORT"
+
+execution:
+  # If ask is present in data, that spread path is used.
+  # If ask is missing, synthetic ask = bid + (fallback_spread_points * point).
+  fallback_spread_points: 1430.0
+  slippage_points: 0.0
+  latency_ms: 0
+
+stress:
+  spread_multiplier: 1.25
+  slippage_multiplier: 2.0
+
+sweep:
+  trigger_opposite_threshold_points: [1, 10000]
+  watch_minutes: [5, 10, 15]
+  max_hold_minutes: [10, 15, 20]
+  entry_offset_ticks: [0, 1, 2]
+
+feasibility_gates:
+  min_trades_required: 40
+  min_baseline_expectancy_points: 0.0
+  min_stress_expectancy_points: -250.0
+  min_positive_month_ratio: 0.5
+  max_month_pnl_share: 0.7
+
+output:
+  out_dir: "C:/Users/Administrator/Desktop/deriv-research/synthetic_spike_backtest/out"
