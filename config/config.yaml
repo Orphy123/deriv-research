@@ -51,4 +51,5 @@ regime_detection:
     n_folds: 6
   exploratory:
     symbols: ["Boom 1000 Index"]
+    # Reserved protocol variants; archived run concluded at H1 Step-2 kill.
     timeframes: ["H4", "D1"]
