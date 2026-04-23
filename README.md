@@ -18,6 +18,9 @@ See [FINDINGS.md](FINDINGS.md) for the full writeup and
 kill criteria. Phase 0.5 per-symbol verdicts live in
 `data/analysis/<symbol>/regimes/VERDICT.md`.
 
+For publication-style formatting, see
+[PUBLICATION_WRITEUP.md](PUBLICATION_WRITEUP.md).
+
 Deriv synthetics research is closed at the Phase 0.5 boundary. Research
 cycles redirected to the FTMO US30/US100 bot (separate repo).
 
@@ -65,12 +68,13 @@ scripts/         # Runnable probes / pullers / analyses
 src/             # Shared modules: logger, mt5_client, tick_io, spike_detector, regime
 data/
   ticks/<symbol>/   # Chunked parquet tick store (gitignored)
-  analysis/<symbol>/ # Per-symbol plots + summary.json (gitignored)
+  analysis/<symbol>/ # Per-symbol summaries (JSON/MD tracked; PNG local-only)
   analysis/<symbol>/regimes/ # Phase 0.5 per-symbol regime outputs + VERDICT.md
-  *.parquet, *.json # Probe outputs (gitignored)
+  *.parquet          # Tick and heavy data files (gitignored)
 logs/            # Daily-rotated run logs (gitignored)
 notebooks/       # (empty — we went script-first for reproducibility)
 PROTOCOL.md      # Pre-registered Phase 0.5 hypothesis + kill criteria
+synthetic_spike_backtest/ # Separate strategy backtest sandbox (inconclusive)
 ```
 
 ## Hard rules for this repo
@@ -83,11 +87,11 @@ PROTOCOL.md      # Pre-registered Phase 0.5 hypothesis + kill criteria
 
 ## What's next
 
-Nothing on this repo. Phase 0 and Phase 0.5 together cover the spike
-process and the inter-spike drift process under pre-registered tests with
-frozen kill thresholds. Both returned negative. Per `PROTOCOL.md` section
-5, Deriv synthetics research is closed and research effort redirected to
-the FTMO US30/US100 bot (separate repo).
+No additional work on the Phase 0 / Phase 0.5 hypotheses. Those tests cover
+the spike process and inter-spike drift process under pre-registered kill
+thresholds, and both returned negative. Per `PROTOCOL.md` section 5, this
+research line is closed and effort is redirected to the FTMO US30/US100 bot
+(separate repo).
 
 The parquet tick store in `data/ticks/` is preserved in case a future
 researcher wants to pre-register and run a different hypothesis on the
