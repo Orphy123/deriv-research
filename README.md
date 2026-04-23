@@ -1,30 +1,32 @@
-# deriv-research
+# Deriv Synthetic Indices Research
 
-Research repo for Deriv synthetic index (Boom 1000 / Crash 1000) trading edge.
-**Not** a trading bot. This exists to answer one question before we write a
-strategy:
+Pre-registered quantitative research on `Boom 1000 Index` and
+`Crash 1000 Index` to test whether their price process contains a tradeable
+statistical edge.
 
-> Does Deriv's spike process on Boom/Crash 1000 exhibit statistical structure
-> that a systematic strategy can exploit, or is it memoryless (as designed)?
+This repository is a **research artifact**, not a trading bot.
 
-## Current status: Phase 0 + Phase 0.5 complete — both negative
+## Research question
 
-**Phase 0:** spike process is memoryless; PSDC falsified.
-**Phase 0.5:** hourly drift-regime structure absent; regime-filter hypothesis
-falsified at Step 2 of the pre-registered protocol on both symbols.
+Do Deriv synthetic indices exhibit exploitable structure for systematic trading,
+or do they behave as approximately memoryless processes once costs are included?
 
-See [FINDINGS.md](FINDINGS.md) for the full writeup and
-[PROTOCOL.md](PROTOCOL.md) for the pre-registered Phase 0.5 hypothesis and
-kill criteria. Phase 0.5 per-symbol verdicts live in
-`data/analysis/<symbol>/regimes/VERDICT.md`.
+## Current verdict (archived)
 
-For publication-style formatting, see
-[PUBLICATION_WRITEUP.md](PUBLICATION_WRITEUP.md).
+- **Phase 0:** Post-Spike Drift Capture (PSDC) falsified.
+- **Phase 0.5:** Drift-regime filter hypothesis killed at Step 2 (ACF gate)
+  on both primary and exploratory runs.
+- **Status:** this research line is closed at the pre-registered boundary.
 
-Deriv synthetics research is closed at the Phase 0.5 boundary. Research
-cycles redirected to the FTMO US30/US100 bot (separate repo).
+## Document map
 
-## Setup
+- `PROTOCOL.md` - pre-registered Phase 0.5 hypothesis and kill criteria.
+- `FINDINGS.md` - full technical findings and interpretation.
+- `PUBLICATION_WRITEUP.md` - publication-style manuscript draft.
+- `data/analysis/*/summary.json` - Phase 0 machine-readable outputs.
+- `data/analysis/*/regimes/VERDICT.md` - Phase 0.5 verdict artifacts.
+
+## Quick start
 
 ```powershell
 cd C:\Users\Administrator\Desktop\deriv-research
@@ -33,68 +35,56 @@ python -m venv venv
 pip install -r requirements.txt
 ```
 
-Drop your Deriv MT5 credentials in `config/accounts.yaml` (gitignored — see
-`config/accounts.example.yaml` for the template).
+Add MT5 credentials to `config/accounts.yaml` (template:
+`config/accounts.example.yaml`).
 
-## Commands
+## Reproduce results
 
 ```powershell
-# Reproducibility: on some Windows + numpy + MKL combos, OpenBLAS can't grab
-# enough thread-pool memory. These two env vars make it single-threaded.
+# Optional stability on some Windows OpenBLAS/MKL setups
 $env:OPENBLAS_NUM_THREADS="1"; $env:OMP_NUM_THREADS="1"
 
-# Phase 0 — test broker symbol strings & IPC chunk limits
+# 1) Confirm broker symbols and history limits
 .\venv\Scripts\python.exe -m scripts.probe_history
 
-# Bulk download ticks (chunked, resumable — existing parquets are reused)
+# 2) Pull or refresh chunked tick store (90 days, resumable)
 .\venv\Scripts\python.exe -m scripts.pull_history --days 90 --chunk-days 7
 
-# Statistical tests: memorylessness + post-spike drift (Phase 0)
-.\venv\Scripts\python.exe -m scripts.analyze_spikes
+# 3) Phase 0 analysis: memorylessness + post-spike drift tests
 .\venv\Scripts\python.exe -m scripts.analyze_spikes --threshold 10000
 
-# Phase 0.5 — regime detection (pre-registered; reads PROTOCOL.md + config)
-# Sequential kill-gated: HMM regime duration -> cleanliness ACF ->
-# top-quartile drift vs spread -> walk-forward. Halts on first kill.
-.\venv\Scripts\python.exe -m scripts.analyze_regimes                    # primary + Boom exploratory
-.\venv\Scripts\python.exe -m scripts.analyze_regimes --skip-exploratory # primary only
+# 4) Phase 0.5 analysis: pre-registered sequential kill-gated regime test
+.\venv\Scripts\python.exe -m scripts.analyze_regimes
 ```
 
-## Directory layout
+## Artifacts and outputs
 
+- Tick parquet store (local, gitignored): `data/ticks/<symbol>/`
+- Phase 0 summaries (tracked JSON): `data/analysis/<symbol>/summary.json`
+- Phase 0.5 step artifacts: `data/analysis/<symbol>/regimes/step_*.json`
+- Phase 0.5 verdict files: `data/analysis/<symbol>/regimes/VERDICT.md`
+- Combined summaries:
+  - `data/analysis/combined_summary.json`
+  - `data/analysis/regimes_combined_summary.json`
+
+Note: heavy outputs (`.parquet`, `.csv`, `.png`) are local-only by default.
+
+## Repository structure
+
+```text
+config/                        # YAML config (credentials file is gitignored)
+scripts/                       # executable pull/probe/analysis entry points
+src/                           # shared research modules
+data/                          # local tick store + tracked analysis summaries
+synthetic_spike_backtest/      # separate strategy sandbox (latest: inconclusive)
+PROTOCOL.md                    # pre-registration
+FINDINGS.md                    # technical report
+PUBLICATION_WRITEUP.md         # manuscript-style version
 ```
-config/          # YAML config (accounts.yaml is gitignored)
-scripts/         # Runnable probes / pullers / analyses
-src/             # Shared modules: logger, mt5_client, tick_io, spike_detector, regime
-data/
-  ticks/<symbol>/   # Chunked parquet tick store (gitignored)
-  analysis/<symbol>/ # Per-symbol summaries (JSON/MD tracked; PNG local-only)
-  analysis/<symbol>/regimes/ # Phase 0.5 per-symbol regime outputs + VERDICT.md
-  *.parquet          # Tick and heavy data files (gitignored)
-logs/            # Daily-rotated run logs (gitignored)
-notebooks/       # (empty — we went script-first for reproducibility)
-PROTOCOL.md      # Pre-registered Phase 0.5 hypothesis + kill criteria
-synthetic_spike_backtest/ # Separate strategy backtest sandbox (inconclusive)
-```
 
-## Hard rules for this repo
+## Scope and governance
 
-1. **No trading code.** This is a research repo. If we ever build a live
-   bot based on any edge we find here, it lives in a *separate* repo.
-2. **Never merge with the `uS30/` FTMO bot.** Isolation is a feature.
-3. **Every analysis ships with a plot and a significance test**, not just
-   summary stats.
-
-## What's next
-
-No additional work on the Phase 0 / Phase 0.5 hypotheses. Those tests cover
-the spike process and inter-spike drift process under pre-registered kill
-thresholds, and both returned negative. Per `PROTOCOL.md` section 5, this
-research line is closed and effort is redirected to the FTMO US30/US100 bot
-(separate repo).
-
-The parquet tick store in `data/ticks/` is preserved in case a future
-researcher wants to pre-register and run a different hypothesis on the
-same data — for example H4/D1 drift regimes or cross-symbol dependence.
-Any such follow-up must write its own PROTOCOL.md before running any
-analysis code.
+- No live trading code in this repository.
+- No threshold retuning after pre-registered kills.
+- Exploratory results do not override primary verdicts.
+- Any future hypothesis on this data requires a new protocol before execution.
