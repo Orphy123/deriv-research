@@ -31,8 +31,8 @@ this strategy is **negative-EV before spike losses**.
 | KS test vs exponential (10k) | **p = 0.26** (fail to reject) | **p = 0.07** (fail to reject at 5%) |
 | Dispersion index (hourly, 10k) | 0.895 | 0.856 |
 | Lag-1 autocorr of inter-arrivals | −0.006 | +0.0006 |
-| Mean λ | ~0.00087 events/s | ~0.00087 events/s |
-| Mean inter-arrival time | ~1,148 s (~19 min) | ~1,148 s (~19 min) |
+| Mean λ (10k) | ~0.00095 events/s | ~0.00087 events/s |
+| Mean inter-arrival time (10k) | ~1,056 s (~17.6 min) | ~1,149 s (~19.2 min) |
 
 Interpretation: the process passes an exponential fit cleanly at the 10k
 threshold (where we have more statistical power). The 30k-threshold marginal
