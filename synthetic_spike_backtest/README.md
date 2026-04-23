@@ -9,6 +9,10 @@ Standalone backtesting project for a Deriv synthetic strategy based on:
 - strict max-hold timeout,
 - explicit feasibility gates.
 
+This is a separate strategy sandbox from the root pre-registered Phase 0 /
+Phase 0.5 falsification workflow. Latest checked-in feasibility output is
+`inconclusive` (`out/feasibility_report.md`).
+
 ## Quick Start
 
 ```powershell
@@ -18,6 +22,9 @@ python -m venv .venv
 pip install -e .
 python -m synthetic_spike.cli run --config config/defaults.yaml
 ```
+
+By default, `config/defaults.yaml` expects tick data under `../data` so it can
+reuse the root repository's parquet store.
 
 ## Sweep + Feasibility
 
