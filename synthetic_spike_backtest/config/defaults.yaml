@@ -3,8 +3,9 @@ project:
   version: "1.0"
 
 data:
-  # Reuse existing research tick parquet store by default.
-  data_root: "C:/Users/Administrator/Desktop/deriv-research/data"
+  # Reuse root-repo research tick parquet store by default.
+  # Path is relative to synthetic_spike_backtest/ when running CLI commands.
+  data_root: "../data"
   symbols:
     - "Boom 1000 Index"
     - "Crash 1000 Index"
@@ -44,4 +45,4 @@ feasibility_gates:
   max_month_pnl_share: 0.7
 
 output:
-  out_dir: "C:/Users/Administrator/Desktop/deriv-research/synthetic_spike_backtest/out"
+  out_dir: "out"

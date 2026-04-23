@@ -22,11 +22,12 @@ paths:
   logs_dir: "logs"
   ticks_subdir: "ticks"
 
-# Spike detection (used in analysis notebooks, not live trading)
+# Spike detection defaults used by scripts.analyze_spikes / analyze_regimes
+# for statistical analysis only (not live trading).
 spike_detection:
   # Minimum single-tick absolute price delta in POINTS to classify as a spike.
   # Boom 1000 spikes are typically 40k-300k+ points. Start conservative at 30k
-  # to capture medium spikes too; verify the distribution in notebook 01.
+  # to capture medium spikes too; verify via data/analysis outputs.
   threshold_points: 30000
 
 # History probe windows (days back from now)
